@@ -1,0 +1,64 @@
+#include 
+using namespace std;
+
+class bank
+{
+    protected:
+        int balance;
+    public:
+        int getbalance()
+        {
+            return balance;
+        }
+};
+class bankA : bank
+{
+    public:
+        bankA(int b)
+        {
+            balance=b;
+        }
+        void display()
+        {
+            cout << "The amount deposited in bank A:$" << balance << endl;
+        }
+};
+class bankB : bank
+{
+    public:
+        bankB(int b)
+        {
+            balance=b;
+        }
+        void display()
+        {
+            cout << "The amount deposited in bank B:$" << balance << endl;
+        }
+};
+class bankC : bank
+{
+    public:
+        bankC(int b)
+        {
+            balance=b;
+        }
+        void display()
+        {
+            cout << "The amount deposited in bank C:$" << balance << endl;
+        }
+};
+
+
+int main()
+{
+    bankA balanceA(1000);
+    balanceA.display();
+    bankB balanceB(1500);
+    balanceB.display();
+    bankC balanceC(2000);
+    balanceC.display();
+
+
+}
+
+
